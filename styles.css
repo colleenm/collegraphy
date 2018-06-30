@@ -1,11 +1,18 @@
 html {
   width: 100%;
+  height: 100%;
 }
 
 body {
   font-family: 'EB Garamond', serif;
   margin: 0;
   width: 100%;
+  height: 100%;
+}
+@media (max-width: 30em) {
+  body {
+    height: 90%; /* TODO this is a hack :( */
+  }
 }
 
 a, a:hover, a:active, a:visited {
@@ -14,27 +21,35 @@ a, a:hover, a:active, a:visited {
 }
 
 .container {
-  width: 80%;
   max-width: 800px;
   margin: auto;
   margin-top: 3em;
+  width: 80%;
+  height: 100%;
+}
+@media (max-width: 30em) {
+  .container {
+    height: 80%; /* TODO this is a hack :( */
+  }
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .title {
   font-size: 2.1rem;
   letter-spacing: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 30em) {
   .title {
     font-size: 1.2rem;
   }
-}
-
-.header {
-  display: flex;
-  justify-content: space-between;
 }
 
 .nav ul {
@@ -49,22 +64,23 @@ a, a:hover, a:active, a:visited {
   margin-left: 2rem;
 }
 
+.nav li:first-child {
+  margin-left: 0;
+}
+
 .nav a {
   color: #1699a9;
 }
 
 .content {
-  padding: 6px;
+  border: 1px solid black;
+  padding: 24px;
+  position: relative;
+  min-height: 60%;
   box-sizing: border-box;
 }
 
-.bordered-content {
-  border: 1px solid black;
-  padding: 16px;
-  position: relative;
-}
-
-.bordered-content:before {
+.content:before {
   content: ' ';
   position: absolute;
   z-index: -1;
@@ -74,3 +90,7 @@ a, a:hover, a:active, a:visited {
   bottom: 4px;
   border: 1px solid black;
 }
+
+/* CV styles
+ * ******************************************* */
+
