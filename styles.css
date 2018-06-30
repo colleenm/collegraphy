@@ -1,3 +1,52 @@
-body {
+html {
+  width: 100%;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: 'EB Garamond', serif;
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.container {
+  min-width: 70%;
+  margin-top: 3em;
+  box-sizing: border-box;
+}
+
+.title { /* TODO fix title on mobile */
+  font-size: 0.1rem;
+  letter-spacing: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.content {
+  padding: 6px;
+  box-sizing: border-box;
+}
+
+.bordered-content {
+  border: 1px solid black;
+  padding: 16px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.bordered-content:before {
+  content: ' ';
+  position: absolute;
+  z-index: -1;
+  top: 4px;
+  left: -6px;
+  right: -6px;
+  bottom: 4px;
+  border: 1px solid black;
 }
