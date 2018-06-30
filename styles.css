@@ -76,7 +76,7 @@ a, a:hover, a:active, a:visited {
   border: 1px solid black;
   padding: 24px;
   position: relative;
-  min-height: 60%;
+  min-height: 30%;
   box-sizing: border-box;
 }
 
