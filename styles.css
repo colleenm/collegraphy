@@ -74,9 +74,8 @@ a, a:hover, a:active, a:visited {
 
 .content {
   border: 1px solid black;
-  padding: 24px;
+  padding: 48px;
   position: relative;
-  min-height: 30%;
   box-sizing: border-box;
 }
 
@@ -91,6 +90,11 @@ a, a:hover, a:active, a:visited {
   border: 1px solid black;
 }
 
-/* CV styles
- * ******************************************* */
+.content div {
+  margin-top: 1em;
+}
+
+.content div:first-child {
+  margin-top: 0;
+}
 
