@@ -15,7 +15,8 @@ a, a:hover, a:active, a:visited {
 
 .container {
   width: 80%;
-  max-width: 80px;
+  max-width: 800px;
+  margin: auto;
   margin-top: 3em;
 }
 
