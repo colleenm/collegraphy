@@ -8,13 +8,14 @@ body {
   width: 100%;
 }
 
-.page {
-  display: flex;
-  justify-content: space-around;
+a, a:hover, a:active, a:visited {
+  text-decoration: none;
+  color: #1699a9;
 }
 
 .container {
-  min-width: 70%;
+  width: 80%;
+  max-width: 80px;
   margin-top: 3em;
 }
 
@@ -30,8 +31,25 @@ body {
   }
 }
 
-.nav {
+.header {
+  display: flex;
+  justify-content: space-between;
+}
 
+.nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.nav a {
+  color: #1699a9;
 }
 
 .content {
