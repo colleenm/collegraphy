@@ -1,25 +1,21 @@
 html {
   width: 100%;
-  box-sizing: border-box;
 }
 
 body {
   font-family: 'EB Garamond', serif;
   margin: 0;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .page {
   display: flex;
   justify-content: space-around;
-  box-sizing: border-box;
 }
 
 .container {
   min-width: 70%;
   margin-top: 3em;
-  box-sizing: border-box;
 }
 
 .title {
@@ -34,6 +30,10 @@ body {
   }
 }
 
+.nav {
+
+}
+
 .content {
   padding: 6px;
   box-sizing: border-box;
@@ -43,7 +43,6 @@ body {
   border: 1px solid black;
   padding: 16px;
   position: relative;
-  box-sizing: border-box;
 }
 
 .bordered-content:before {
