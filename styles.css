@@ -37,13 +37,12 @@ a, a:hover, a:active, a:visited {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: .8rem;
 }
 
 .title {
   font-size: 2.1rem;
   letter-spacing: 1rem;
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 30em) {
@@ -52,20 +51,26 @@ a, a:hover, a:active, a:visited {
   }
 }
 
+.subtitle {
+  font-style: italic;
+  margin-left: 16px;
+  margin-top: .7rem;
+  line-height: 2.1rem;
+}
+
+.nav {
+  margin-bottom: 1.2rem;
+}
+
 .nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
 }
 
 .nav li {
   display: inline-block;
-  margin-left: 2rem;
-}
-
-.nav li:first-child {
-  margin-left: 0;
+  margin-right: 2rem;
 }
 
 .nav a {
