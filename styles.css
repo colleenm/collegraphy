@@ -20,6 +20,10 @@ a, a:hover, a:active, a:visited {
   color: #1699a9;
 }
 
+p, h1 {
+  margin: 0;
+}
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -72,6 +76,10 @@ a, a:hover, a:active, a:visited {
   margin-right: 2rem;
 }
 
+.nav li.nav-current {
+  font-weight: bold;
+}
+
 .nav a {
   color: #1699a9;
 }
@@ -94,11 +102,23 @@ a, a:hover, a:active, a:visited {
   border: 1px solid black;
 }
 
-.content div {
+.content p {
   margin-top: 1em;
 }
 
-.content div:first-child {
+.content p:first-child {
   margin-top: 0;
 }
 
+/* Project page styles
+ * ************************************/
+
+.project-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.project-title {
+  text-align: center;
+  margin-top: .5em;
+}
