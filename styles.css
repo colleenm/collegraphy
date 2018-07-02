@@ -93,6 +93,7 @@ p, h1 {
   padding: 48px;
   position: relative;
   box-sizing: border-box;
+  margin-bottom: 24px;
 }
 
 .content:before {
