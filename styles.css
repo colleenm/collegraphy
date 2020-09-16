@@ -24,6 +24,22 @@ p, h1 {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+  padding-left: 24px;
+}
+
+li:before {
+  content: "\2B29";
+  margin-right: 8px;
+  font-size: .8em;
+}
+
+.nav li:before {
+  content: '';
+}
+
+
 .container {
   max-width: 800px;
   margin: auto;
@@ -121,13 +137,68 @@ p, h1 {
 .project-list {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .project-block {
   display: block;
+  margin: 0 32px;
+}
+@media only screen and (max-width: 480px) {
+  .project-block {
+    margin: 32px;
+  }
 }
 
 .project-title {
   text-align: center;
   margin-top: .5em;
+}
+
+.project-date {
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.ariadne-desktop {
+  margin: auto;
+  border: 1px solid #ccc;
+  height: 400px;
+}
+
+.ariadne-mobile {
+  width: 200px;
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .ariadne-desktop, .ariadne-loom-video {
+    display: none;
+  }
+  .ariadne-mobile {
+    display: block;
+  }
+}
+
+.herald-desktop {
+  height: 250px;
+}
+
+.herald-mobile {
+  height: 200px;
+  margin-top: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+.herald-desktop {
+    display: none;
+  }
+
+  .herald-mobile {
+    margin-top: 0;
+    height: 200px;
+    margin: 0 12px;
+    margin-bottom: 32px;
+  }
 }
