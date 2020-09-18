@@ -19,7 +19,6 @@ window.addEventListener('load', (event) => {
     .then(response => response.json())
     .then(data => {
       jsonData = data;
-      console.log(jsonData)
       main(data)
     })
     .catch(console.error)
@@ -28,11 +27,11 @@ window.addEventListener('load', (event) => {
 function main(data) {
   let userData = data;
   let qString = window.location.search
-  console.log(qString)
   let email = qString.slice(qString.indexOf('=') + 1)
   console.log('Setting current user to ' + email)
   currentUser = email
   // let userData = data[currentUser]
+  // console.log('data for this user: ' + userData)
 
   let startDateIndex = 0;
   // TODO get rid of first part of if statement, this field must exist
