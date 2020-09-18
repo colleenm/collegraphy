@@ -8,10 +8,16 @@
 /*
  * TODO
  *  - none of this accounts for dates with no data
- *  - programmatic screenshots...?
+ *  - there's a start date bug, womp
  */
 
 const jsonFile = './all_metrics_clean.json'
+
+const dates = ['2020-09-09', '2020-09-10', '2020-09-11',
+  '2020-09-12', '2020-09-13', '2020-09-14', '2020-09-15',
+  '2020-09-16', '2020-09-17', '2020-09-18']
+const dateLabels = ['9/9', '9/10', '9/11', '9/12', '9/13', '9/14', '9/15',
+  '9/16', '9/17', '9/18'];
 
 window.addEventListener('load', (event) => {
   console.log('welcome to v1 dummyviz!')
@@ -35,9 +41,9 @@ function main(data) {
   console.log(userData)
 
   let startDateIndex = 0;
-  // TODO get rid of first part of if statement, this field must exist
-  if (data['start_date'] && data['start_date'] != '2020-09-9') {
-    startDateIndex = dates.indexOf(data['start_date'])
+
+  if (userData['start_date'] && userData['start_date'] != '2020-09-9') {
+    startDateIndex = dates.indexOf(userData['start_date'])
     if (startDateIndex == -1) {
       throw 'Unknown start date for user ' + currentUser + ' : ' + data['start_date']
     }
@@ -66,8 +72,7 @@ function createMoodChart(canv, chartData) {
     options: {
       responsive: false,
       title: {
-        display: true,
-        text: 'TITLE GOES HERE'
+        display: false,
       },
       legend: {
         position: 'bottom'
@@ -99,11 +104,6 @@ function createMoodChart(canv, chartData) {
     }
   })
 }
-
-const dates = ['2020-09-9', '2020-09-10', '2020-09-11',
-  '2020-09-12', '2020-09-13', '2020-09-14', '2020-09-15',
-  '2020-09-16', '2020-09-17', '2020-09-18']
-const dateLabels = ['9/9', '9/10', '9/11', '9/12', '9/13', '9/14', '9/15', '9/16', '9/17', '9/18'];
 
 const firstChartMoods = ['easy', 'focused', 'switching', 'productive'];
 const firstChartMoodLabels = ['Ease', 'Focus', 'Ease of task switching', 'Productivity'];
@@ -214,8 +214,7 @@ function createConfoundChart(chartData) {
     options: {
       responsive: false,
       title: {
-        display: true,
-        text: 'TITLE GOES HERE'
+        display: false,
       },
       legend: {
         position: 'bottom'
