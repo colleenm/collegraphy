@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <script src="chartjs/Chart.js"></script>
+    <script src="dummy-viz.js"></script>
+    <style>
+      body {
+        font-family: 'Helvetica', 'sans-serif';
+        font-size: .8em;
+        font-weight: 300;
+
+      }
+
+      canvas, table {
+        margin-bottom: 32px;
+      }
+
+      #moodChart1, #moodChart2, #confoundChart {
+        margin-left: 40px;
+      }
+
+      #confoundChart {
+        padding-left: 32px;
+      }
+
+      #confoundTable {
+        width: 944px;
+        margin-left: 13px;
+        font-size: inherit;
+        font-weight: inherit;
+        border-spacing: 0;
+
+        margin-top: 80px;
+      }
+
+      #confoundTable tr {
+        height: 46px;
+      }
+
+      #confoundTable td {
+        width: 88px;
+        padding: 0;
+        text-align: center;
+        border-right: 1px solid #ddd;
+      }
+
+      #confoundTable td.boolCell {
+        font-size: 2em;
+        color: #508dda;
+      }
+
+      #confoundTable td:first-child {
+        text-align: left;
+        text-wrap: wrap;
+        width: 72px;
+        border-right: 1px solid #999;
+        padding: 8px;
+      }
+
+      #confoundTable tr:last-child td {
+        border-top: 1px solid #999;
+      }
+
+      #journalTable {
+        width: 800px;
+        font-size: 1em;
+        border-spacing: 0;
+      }
+
+      #journalTable th {
+        text-align: center;
+        text-transform: uppercase;
+        color: #666;
+        padding-bottom: 16px;
+      }
+
+      #journalTable td {
+        border-bottom: 1px solid #ddd;
+      }
+
+      .journal-date {
+        text-align: center;
+        border-right: 1px solid #ddd;
+        padding: 0 8px;
+      }
+
+      .journal-info {
+        display: flex;
+      }
+
+      .intention-section {
+        padding: 0 16px;
+        flex-basis: 50%;
+      }
+
+      .intention-heading {
+        text-transform: uppercase;
+        color: #999;
+        font-size: .8em;
+        font-weight: 600;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+
+      .intention-content {
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <canvas id="moodChart1" width="900" height="400"></canvas>
+    <br>
+    <canvas id="moodChart2" width="900" height="400"></canvas>
+    <canvas id="confoundChart" width="944" height="400"></canvas>
+    <table id="confoundTable"></table>
+    <table id="journalTable"></table>
+  </body>
+</html>
