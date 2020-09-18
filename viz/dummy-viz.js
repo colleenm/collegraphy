@@ -14,6 +14,7 @@
 const jsonFile = './all_metrics_clean.json'
 
 window.addEventListener('load', (event) => {
+  console.log('welcome to v1 dummyviz!')
   const req = new Request(jsonFile)
   fetch(req)
     .then(response => response.json())
