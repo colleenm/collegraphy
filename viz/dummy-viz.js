@@ -8,7 +8,6 @@
 /*
  * TODO
  *  - none of this accounts for dates with no data
- *  - there's a start date bug, womp
  */
 
 const jsonFile = './all_metrics_clean.json'
@@ -20,7 +19,6 @@ const dateLabels = ['9/9', '9/10', '9/11', '9/12', '9/13', '9/14', '9/15',
   '9/16', '9/17', '9/18'];
 
 window.addEventListener('load', (event) => {
-  console.log('welcome to v1 dummyviz!')
   const req = new Request(jsonFile)
   fetch(req)
     .then(response => response.json())
@@ -358,8 +356,6 @@ function createJournalTable(data, startDateIndex) {
   // TODO how to deal with blank days?
   let slicedDateLabels = dateLabels.slice(startDateIndex)
   for (item in dates.slice(startDateIndex)) {
-    console.log(startDateIndex)
-    console.log('looking at item ' + item)
     let row = document.createElement('tr')
     let dateCell = document.createElement('td')
     dateCell.classList.add('journal-date')
