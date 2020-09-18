@@ -1,7 +1,6 @@
 /* I apologize for all the code in this file.
  * Notes:
  *  - constants are defined immediately before teh function in which they are used
- *  -
  *
  * - cmckenzie
  */
@@ -13,8 +12,6 @@
  */
 
 const jsonFile = './dummy-data.json'
-
-const currentUser = ''
 
 window.addEventListener('load', (event) => {
   const req = new Request(jsonFile)
@@ -30,6 +27,11 @@ window.addEventListener('load', (event) => {
 
 function main(data) {
   let userData = data;
+  let qString = window.location.search
+  console.log(qString)
+  let email = qString.slice(qString.indexOf('=') + 1)
+  console.log('Setting current user to ' + email)
+  currentUser = email
   // let userData = data[currentUser]
 
   let startDateIndex = 0;
