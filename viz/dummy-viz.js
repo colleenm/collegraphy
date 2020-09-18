@@ -11,7 +11,7 @@
  *  - programmatic screenshots...?
  */
 
-const jsonFile = './dummy-data.json'
+const jsonFile = './all_metrics_clean.json'
 
 window.addEventListener('load', (event) => {
   const req = new Request(jsonFile)
@@ -25,13 +25,13 @@ window.addEventListener('load', (event) => {
 });
 
 function main(data) {
-  let userData = data;
   let qString = window.location.search
   let email = qString.slice(qString.indexOf('=') + 1)
   console.log('Setting current user to ' + email)
   currentUser = email
-  // let userData = data[currentUser]
-  // console.log('data for this user: ' + userData)
+  let userData = data[currentUser]
+  console.log('data for this user:')
+  console.log(userData)
 
   let startDateIndex = 0;
   // TODO get rid of first part of if statement, this field must exist
