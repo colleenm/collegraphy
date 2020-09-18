@@ -356,11 +356,14 @@ function createJournalTable(data, startDateIndex) {
   tBody.appendChild(titleRow)
 
   // TODO how to deal with blank days?
+  let slicedDateLabels = dateLabels.slice(startDateIndex)
   for (item in dates.slice(startDateIndex)) {
+    console.log(startDateIndex)
+    console.log('looking at item ' + item)
     let row = document.createElement('tr')
     let dateCell = document.createElement('td')
     dateCell.classList.add('journal-date')
-    dateCell.appendChild(document.createTextNode(dateLabels[item]));
+    dateCell.appendChild(document.createTextNode(slicedDateLabels[item]));
     row.appendChild(dateCell)
 
     let infoCell = document.createElement('td')
