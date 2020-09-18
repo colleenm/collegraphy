@@ -156,13 +156,25 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         borderWidth: 1
       },
 
+      // invisible bars to change alignment of sleep bar
       {
         type: 'bar',
         data: data['sleep'],
-        //yAxisID: 'sleep',
-        label: 'Sleep quality',
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        borderColor: 'rgba(0,0,0,0.6)',
+        yAxisID: 'sleep',
+        label: '',
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(255,0,0,0)',
+        borderWidth: 1,
+        barThickness: 12,
+      },
+
+      {
+        type: 'bar',
+        data: data['sleep'],
+        yAxisID: 'sleep',
+        label: '',
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(0,255,0,0)',
         borderWidth: 1,
         barThickness: 24
       },
@@ -171,21 +183,21 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         type: 'bar',
         data: data['sleep'],
         yAxisID: 'sleep',
-        label: '',
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,0,0,0)',
+        label: 'Sleep quality',
+        backgroundColor: 'rgba(0,0,0,0.2)',
+        borderColor: 'rgba(0,0,0,0.6)',
         borderWidth: 1,
-        barThickness: 12
+        barThickness: 24,
       },
 
-      // invisible bar to change alignment of sleep bar
+
       {
         type: 'bar',
         data: data['sleep'],
         yAxisID: 'sleep',
         label: '',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(0,0,255,0)',
         borderWidth: 1,
         barThickness: 12
       }
