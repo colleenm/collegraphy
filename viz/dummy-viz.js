@@ -47,6 +47,8 @@ function main(data) {
     }
   }
 
+  Chart.defaults.global.defaultFontSize = 13;
+
   let moodChartData = createMoodChartData(userData, startDateIndex);
   let moodChartCanv = document.getElementById('moodChart');
   createMoodChart(moodChartCanv, moodChartData);
@@ -71,6 +73,7 @@ function createMoodChart(canv, chartData) {
       legend: {
         position: 'right'
       },
+      defaultFontSize: 16,
 
       scales: {
         yAxes: [
