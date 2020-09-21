@@ -8,7 +8,9 @@
       null,
       3,
       null,
-      2
+      2,
+      null,
+      null
     ],
     "alcohol": [
       0,
@@ -18,7 +20,9 @@
       null,
       0,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -28,7 +32,9 @@
       null,
       1,
       null,
-      1
+      1,
+      null,
+      null
     ],
     "caffeine": [
       0,
@@ -38,7 +44,9 @@
       null,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "run": [
       0,
@@ -48,7 +56,9 @@
       null,
       0,
       null,
-      1
+      1,
+      null,
+      null
     ],
     "resist-train": [
       0,
@@ -58,7 +68,9 @@
       null,
       0,
       null,
-      1
+      1,
+      null,
+      null
     ],
     "meditate": [
       1,
@@ -68,7 +80,9 @@
       null,
       1,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "intention": [
       "To be productive",
@@ -78,7 +92,9 @@
       null,
       "Be very productive and catchup on my organization",
       null,
-      "Get back into routine"
+      "Get back into routine",
+      null,
+      null
     ],
     "prepare-notes": [
       "Nooe",
@@ -88,10 +104,12 @@
       null,
       "I feel like Ive gained weight on this... not sure. Fasting today to double check if its the culprit. This would put a huge wrinkle in this for me.",
       null,
-      "Im a bit concerned with weight gain... ive been putting on pound past 3 days, trying to monitor"
+      "Im a bit concerned with weight gain... ive been putting on pound past 3 days, trying to monitor",
+      null,
+      null
     ],
     "start_date": "2020-09-09",
-    "n_days": 8,
+    "n_days": 10,
     "easy": [
       2,
       null,
@@ -100,6 +118,8 @@
       null,
       null,
       1,
+      null,
+      null,
       null
     ],
     "focused": [
@@ -110,6 +130,8 @@
       null,
       null,
       1,
+      null,
+      null,
       null
     ],
     "switching": [
@@ -120,6 +142,8 @@
       null,
       null,
       1,
+      null,
+      null,
       null
     ],
     "emotional-others": [
@@ -130,6 +154,8 @@
       null,
       null,
       2,
+      null,
+      null,
       null
     ],
     "emotional-self": [
@@ -140,6 +166,8 @@
       null,
       null,
       2,
+      null,
+      null,
       null
     ],
     "confident": [
@@ -150,6 +178,8 @@
       null,
       null,
       1,
+      null,
+      null,
       null
     ],
     "relaxed": [
@@ -160,6 +190,8 @@
       null,
       null,
       3,
+      null,
+      null,
       null
     ],
     "productive": [
@@ -170,6 +202,8 @@
       null,
       null,
       1,
+      null,
+      null,
       null
     ],
     "intention-success": [
@@ -180,6 +214,8 @@
       null,
       null,
       "I was somewhat on track",
+      null,
+      null,
       null
     ],
     "reflect-notes": [
@@ -190,6 +226,8 @@
       null,
       null,
       "No",
+      null,
+      null,
       null
     ]
   },
@@ -824,7 +862,8 @@
       3,
       3,
       2,
-      1
+      1,
+      null
     ],
     "alcohol": [
       0,
@@ -834,7 +873,8 @@
       0,
       0,
       0,
-      0
+      0,
+      null
     ],
     "caffeine": [
       1,
@@ -844,7 +884,8 @@
       1,
       1,
       1,
-      1
+      1,
+      null
     ],
     "yoga": [
       0,
@@ -854,7 +895,8 @@
       0,
       0,
       0,
-      1
+      1,
+      null
     ],
     "resist-train": [
       0,
@@ -864,7 +906,8 @@
       0,
       0,
       0,
-      0
+      0,
+      null
     ],
     "meditate": [
       1,
@@ -874,7 +917,8 @@
       1,
       0,
       0,
-      0
+      0,
+      null
     ],
     "intention": [
       "Productivity",
@@ -884,7 +928,8 @@
       "Focus",
       "Productivity",
       "Play",
-      "Productivity"
+      "Productivity",
+      null
     ],
     "prepare-notes": [
       "No",
@@ -894,10 +939,11 @@
       "No",
       "No",
       "Headache",
-      "None"
+      "None",
+      null
     ],
     "start_date": "2020-09-10",
-    "n_days": 8,
+    "n_days": 9,
     "easy": [
       2,
       3,
@@ -906,7 +952,8 @@
       1,
       0,
       3,
-      1
+      1,
+      null
     ],
     "focused": [
       1,
@@ -916,7 +963,8 @@
       1,
       1,
       4,
-      2
+      2,
+      null
     ],
     "switching": [
       2,
@@ -926,7 +974,8 @@
       1,
       1,
       4,
-      2
+      2,
+      null
     ],
     "emotional-others": [
       0,
@@ -936,7 +985,8 @@
       1,
       0,
       4,
-      2
+      2,
+      null
     ],
     "emotional-self": [
       0,
@@ -946,7 +996,8 @@
       0,
       1,
       4,
-      1
+      1,
+      null
     ],
     "confident": [
       2,
@@ -956,7 +1007,8 @@
       0,
       0,
       4,
-      2
+      2,
+      null
     ],
     "relaxed": [
       2,
@@ -966,7 +1018,8 @@
       1,
       0,
       3,
-      2
+      2,
+      null
     ],
     "productive": [
       1,
@@ -976,7 +1029,8 @@
       1,
       1,
       3,
-      2
+      2,
+      null
     ],
     "intention-success": [
       "I was somewhat on track",
@@ -986,7 +1040,8 @@
       "My dose had no impact on my intention",
       "I was somewhat on track",
       "My dose interfered with my intention",
-      "My dose had no impact on my intention"
+      "My dose had no impact on my intention",
+      null
     ],
     "reflect-notes": [
       "Hurt wrist",
@@ -996,7 +1051,8 @@
       null,
       "No",
       null,
-      "Took 1/3\nOf B in the am"
+      "Took 1/3\\nOf B in the am",
+      null
     ]
   },
   "erik@baincapital.com": {
@@ -1114,7 +1170,7 @@
       null,
       "With an old a friend, catching up and having fun on the trails",
       null,
-      "It may not be relevant for other folks but Im dealing with some relatively big life events; family and personal.  Somehow accounting for the black swans of life would be good.  For example in the last 3 weeks: Ive lost one of my best friends to a freak accident and I had to red eye to east coast & back to LA because my mother (who has Parkinsons) had a slip at the market.  I feel like outside my own personal health (which is strong thankfully) the other life event boxes got checked. \n\nAlso, traveling for work may have gone down but its a huge stressor.  Especially for me When I go west to east. Long car rides dont cross time zones but present other problems.  Again - travel may not be an issue in this post Covid world but if normalcy returns it will be.",
+      "It may not be relevant for other folks but Im dealing with some relatively big life events; family and personal.  Somehow accounting for the black swans of life would be good.  For example in the last 3 weeks: Ive lost one of my best friends to a freak accident and I had to red eye to east coast & back to LA because my mother (who has Parkinsons) had a slip at the market.  I feel like outside my own personal health (which is strong thankfully) the other life event boxes got checked. \\n\\nAlso, traveling for work may have gone down but its a huge stressor.  Especially for me When I go west to east. Long car rides dont cross time zones but present other problems.  Again - travel may not be an issue in this post Covid world but if normalcy returns it will be.",
       null,
       null,
       null,
@@ -1253,6 +1309,7 @@
       4,
       4,
       3,
+      null,
       null
     ],
     "alcohol": [
@@ -1264,6 +1321,7 @@
       0,
       0,
       0,
+      null,
       null
     ],
     "food": [
@@ -1275,6 +1333,7 @@
       1,
       0,
       0,
+      null,
       null
     ],
     "supps": [
@@ -1286,6 +1345,7 @@
       1,
       1,
       1,
+      null,
       null
     ],
     "caffeine": [
@@ -1297,7 +1357,8 @@
       1,
       1,
       1,
-      1
+      1,
+      null
     ],
     "nicotine": [
       null,
@@ -1308,7 +1369,8 @@
       1,
       0,
       0,
-      1
+      1,
+      null
     ],
     "yoga": [
       null,
@@ -1319,6 +1381,7 @@
       1,
       0,
       0,
+      null,
       null
     ],
     "meditate": [
@@ -1330,6 +1393,7 @@
       1,
       1,
       1,
+      null,
       null
     ],
     "intention": [
@@ -1341,6 +1405,7 @@
       "Focus and energy",
       "Confidence, ease and flow",
       "Calm confidence",
+      null,
       null
     ],
     "prepare-notes": [
@@ -1352,10 +1417,11 @@
       null,
       "I drink a bullet proof coffee each morning around 7- with a tbsp of ghee butter, MCT oil, cinnamon and cardamom.",
       "Very busy day ahead with potential stressors including running around to meetings in different parts of town and a challenging customer",
+      null,
       null
     ],
     "start_date": "2020-09-10",
-    "n_days": 8,
+    "n_days": 9,
     "easy": [
       2,
       2,
@@ -1365,7 +1431,8 @@
       2,
       1,
       null,
-      1
+      1,
+      null
     ],
     "focused": [
       3,
@@ -1376,7 +1443,8 @@
       2,
       2,
       null,
-      2
+      2,
+      null
     ],
     "switching": [
       3,
@@ -1387,7 +1455,8 @@
       2,
       2,
       null,
-      2
+      2,
+      null
     ],
     "emotional-others": [
       3,
@@ -1398,7 +1467,8 @@
       1,
       1,
       null,
-      1
+      1,
+      null
     ],
     "emotional-self": [
       2,
@@ -1409,7 +1479,8 @@
       1,
       0,
       null,
-      1
+      1,
+      null
     ],
     "confident": [
       2,
@@ -1420,7 +1491,8 @@
       2,
       2,
       null,
-      3
+      3,
+      null
     ],
     "relaxed": [
       3,
@@ -1431,7 +1503,8 @@
       3,
       2,
       null,
-      2
+      2,
+      null
     ],
     "productive": [
       2,
@@ -1442,7 +1515,8 @@
       1,
       2,
       null,
-      2
+      2,
+      null
     ],
     "intention-success": [
       "I was somewhat on track",
@@ -1453,10 +1527,12 @@
       "I was somewhat on track",
       "My dose helped me act on my intention",
       null,
-      "My dose had no impact on my intention"
+      "My dose had no impact on my intention",
+      null
     ],
     "reflect-notes": [
       "Felt a slight anxiety throughout the day due to work pressures and deadlines",
+      null,
       null,
       null,
       null,
@@ -1475,7 +1551,10 @@
       3,
       4,
       2,
-      4
+      4,
+      null,
+      null,
+      null
     ],
     "alcohol": [
       2,
@@ -1484,7 +1563,10 @@
       1,
       2,
       1,
-      2
+      2,
+      null,
+      null,
+      null
     ],
     "food": [
       0,
@@ -1493,7 +1575,10 @@
       0,
       0,
       0,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "canna": [
       1,
@@ -1502,7 +1587,10 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -1511,7 +1599,10 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "caffeine": [
       1,
@@ -1520,7 +1611,10 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "nicotine": [
       0,
@@ -1529,7 +1623,10 @@
       1,
       0,
       0,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "yoga": [
       1,
@@ -1538,7 +1635,10 @@
       1,
       null,
       0,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "meditate": [
       0,
@@ -1547,7 +1647,10 @@
       1,
       1,
       0,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "intention": [
       "Focus",
@@ -1556,7 +1659,10 @@
       "Energy",
       "Relax",
       "Productivity",
-      "Positivity"
+      "Positivity",
+      null,
+      null,
+      null
     ],
     "prepare-notes": [
       "None",
@@ -1565,10 +1671,13 @@
       null,
       "Took a micro dose of psilocybin",
       null,
+      null,
+      null,
+      null,
       null
     ],
     "start_date": "2020-09-09",
-    "n_days": 7,
+    "n_days": 10,
     "easy": [
       1,
       null,
@@ -1576,6 +1685,9 @@
       null,
       1,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "focused": [
@@ -1585,6 +1697,9 @@
       null,
       2,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "switching": [
@@ -1594,6 +1709,9 @@
       null,
       1,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "emotional-others": [
@@ -1603,6 +1721,9 @@
       null,
       1,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "emotional-self": [
@@ -1612,6 +1733,9 @@
       null,
       1,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "confident": [
@@ -1621,6 +1745,9 @@
       null,
       1,
       2,
+      null,
+      null,
+      null,
       null
     ],
     "relaxed": [
@@ -1630,6 +1757,9 @@
       null,
       1,
       2,
+      null,
+      null,
+      null,
       null
     ],
     "productive": [
@@ -1639,6 +1769,9 @@
       null,
       2,
       1,
+      null,
+      null,
+      null,
       null
     ],
     "intention-success": [
@@ -1648,6 +1781,9 @@
       null,
       "My dose helped me act on my intention",
       "My dose helped me act on my intention",
+      null,
+      null,
+      null,
       null
     ]
   },
@@ -1880,6 +2016,9 @@
       null,
       3,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "alcohol": [
@@ -1889,6 +2028,9 @@
       1,
       null,
       0,
+      null,
+      null,
+      null,
       null,
       null
     ],
@@ -1900,7 +2042,10 @@
       0,
       0,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -1909,6 +2054,9 @@
       1,
       null,
       1,
+      null,
+      null,
+      null,
       null,
       null
     ],
@@ -1920,7 +2068,10 @@
       0,
       1,
       0,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "resist-train": [
       0,
@@ -1929,6 +2080,9 @@
       0,
       null,
       0,
+      null,
+      null,
+      null,
       null,
       null
     ],
@@ -1940,6 +2094,9 @@
       null,
       1,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "intention": [
@@ -1949,6 +2106,9 @@
       "To be productive with desk work, and to break for yoga.",
       null,
       "Productive desk work and several phone calls, be present, and to have a good workout.",
+      null,
+      null,
+      null,
       null,
       null
     ],
@@ -1960,10 +2120,13 @@
       null,
       "You should ask if you have, or plan to, exercise, not just if you have. The survey reads like a baseline in some places and a morning recap in others. I find it to be a little bit annoying. Id recommend the subject fill it out at the same time that they take their dose, and that the time of dose is tracked.",
       null,
+      null,
+      null,
+      null,
       null
     ],
     "start_date": "2020-09-10",
-    "n_days": 6,
+    "n_days": 9,
     "easy": [
       null,
       null,
@@ -1972,7 +2135,10 @@
       2,
       2,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "focused": [
       null,
@@ -1982,7 +2148,10 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "switching": [
       null,
@@ -1992,7 +2161,10 @@
       3,
       2,
       2,
-      2
+      2,
+      null,
+      null,
+      null
     ],
     "emotional-others": [
       null,
@@ -2002,7 +2174,10 @@
       1,
       2,
       4,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "emotional-self": [
       null,
@@ -2012,7 +2187,10 @@
       1,
       1,
       3,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "confident": [
       null,
@@ -2022,7 +2200,10 @@
       2,
       1,
       1,
-      2
+      2,
+      null,
+      null,
+      null
     ],
     "relaxed": [
       null,
@@ -2032,7 +2213,10 @@
       3,
       3,
       3,
-      1
+      1,
+      null,
+      null,
+      null
     ],
     "productive": [
       null,
@@ -2042,7 +2226,10 @@
       1,
       1,
       1,
-      2
+      2,
+      null,
+      null,
+      null
     ],
     "intention-success": [
       null,
@@ -2052,7 +2239,10 @@
       "My dose interfered with my intention",
       "I acted on my intention",
       "My dose helped me act on my intention",
-      "My dose interfered with my intention"
+      "My dose interfered with my intention",
+      null,
+      null,
+      null
     ],
     "reflect-notes": [
       null,
@@ -2062,7 +2252,10 @@
       null,
       "Typical day. Not bad, couldve done better. I realize that switching between tasks and constant technological interruptions are a huge impediment to productivity.",
       null,
-      "Took 2.5 at 1pm and I feel my empathy increased in conversations but I had trouble holding focus."
+      "Took 2.5 at 1pm and I feel my empathy increased in conversations but I had trouble holding focus.",
+      null,
+      null,
+      null
     ]
   },
   "johnchen@post.harvard.edu": {
@@ -2073,7 +2266,10 @@
       5,
       4,
       null,
-      4
+      4,
+      null,
+      null,
+      null
     ],
     "alcohol": [
       0,
@@ -2082,7 +2278,10 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "food": [
       0,
@@ -2091,7 +2290,10 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "caffeine": [
       0,
@@ -2100,7 +2302,10 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null,
+      null
     ],
     "intention": [
       "Focus with levity",
@@ -2109,7 +2314,10 @@
       "Rest and relax",
       "Recover and rest",
       null,
-      "Arrive at end of day feeling energized"
+      "Arrive at end of day feeling energized",
+      null,
+      null,
+      null
     ],
     "prepare-notes": [
       null,
@@ -2118,14 +2326,20 @@
       "Trying to fast today",
       "32 hours into fasting - will do for 4 more hours",
       null,
-      "Have been trying Source at 6p when Im not in meetings and have more time to work. Been good for second wind of energy."
+      "Have been trying Source at 6p when Im not in meetings and have more time to work. Been good for second wind of energy.",
+      null,
+      null,
+      null
     ],
     "start_date": "2020-09-09",
-    "n_days": 7,
+    "n_days": 10,
     "easy": [
       null,
       null,
       2,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -2138,12 +2352,18 @@
       null,
       null,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "switching": [
       null,
       null,
       2,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -2156,12 +2376,18 @@
       null,
       null,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "emotional-self": [
       null,
       null,
       2,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -2174,6 +2400,9 @@
       null,
       null,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "relaxed": [
@@ -2183,12 +2412,18 @@
       null,
       null,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "productive": [
       null,
       null,
       2,
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -2201,12 +2436,18 @@
       null,
       null,
       null,
+      null,
+      null,
+      null,
       null
     ],
     "reflect-notes": [
       null,
       null,
       "Air quality was poor and was distracting, difficulty breathing at times.",
+      null,
+      null,
+      null,
       null,
       null,
       null,
@@ -2222,7 +2463,9 @@
       3,
       4,
       5,
-      4
+      4,
+      null,
+      null
     ],
     "alcohol": [
       0,
@@ -2232,7 +2475,9 @@
       3,
       2,
       0,
-      2
+      2,
+      null,
+      null
     ],
     "food": [
       0,
@@ -2242,7 +2487,9 @@
       2,
       2,
       0,
-      1
+      1,
+      null,
+      null
     ],
     "canna": [
       1,
@@ -2252,7 +2499,9 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -2262,7 +2511,9 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "caffeine": [
       0,
@@ -2272,7 +2523,9 @@
       0,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "run": [
       1,
@@ -2282,7 +2535,9 @@
       0,
       0,
       1,
-      0
+      0,
+      null,
+      null
     ],
     "resist-train": [
       0,
@@ -2292,7 +2547,9 @@
       0,
       0,
       0,
-      1
+      1,
+      null,
+      null
     ],
     "meditate": [
       1,
@@ -2302,7 +2559,9 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "intention": [
       "High performance and mood stability",
@@ -2312,7 +2571,9 @@
       "Recovery",
       "Productive monday",
       "Less anxiety and racing thoughts",
-      "Creativity"
+      "Creativity",
+      null,
+      null
     ],
     "prepare-notes": [
       "Na",
@@ -2322,10 +2583,12 @@
       null,
       null,
       null,
+      null,
+      null,
       null
     ],
     "start_date": "2020-09-09",
-    "n_days": 8,
+    "n_days": 10,
     "easy": [
       null,
       null,
@@ -2334,6 +2597,8 @@
       null,
       2,
       1,
+      null,
+      null,
       null
     ],
     "focused": [
@@ -2344,6 +2609,8 @@
       null,
       2,
       1,
+      null,
+      null,
       null
     ],
     "switching": [
@@ -2354,6 +2621,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "emotional-others": [
@@ -2364,6 +2633,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "emotional-self": [
@@ -2374,6 +2645,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "confident": [
@@ -2384,6 +2657,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "relaxed": [
@@ -2394,6 +2669,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "productive": [
@@ -2404,6 +2681,8 @@
       null,
       1,
       1,
+      null,
+      null,
       null
     ],
     "intention-success": [
@@ -2414,6 +2693,8 @@
       null,
       "I didnt take my dose today",
       "I acted on my intention",
+      null,
+      null,
       null
     ]
   },
@@ -2425,7 +2706,9 @@
       4,
       3,
       null,
-      3
+      3,
+      null,
+      null
     ],
     "alcohol": [
       2,
@@ -2434,7 +2717,9 @@
       1,
       1,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -2443,7 +2728,9 @@
       1,
       1,
       null,
-      1
+      1,
+      null,
+      null
     ],
     "caffeine": [
       1,
@@ -2452,7 +2739,9 @@
       1,
       1,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "run": [
       1,
@@ -2461,7 +2750,9 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "yoga": [
       1,
@@ -2470,7 +2761,9 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "resist-train": [
       0,
@@ -2479,7 +2772,9 @@
       0,
       0,
       null,
-      0
+      0,
+      null,
+      null
     ],
     "meditate": [
       1,
@@ -2488,7 +2783,9 @@
       1,
       1,
       null,
-      1
+      1,
+      null,
+      null
     ],
     "intention": [
       "Productivity! Catching up from the weekend.",
@@ -2497,7 +2794,9 @@
       "Focus & timelinesss. Checking things off to do lists",
       "Productivity",
       null,
-      "Equanimity"
+      "Equanimity",
+      null,
+      null
     ],
     "prepare-notes": [
       null,
@@ -2506,10 +2805,12 @@
       null,
       null,
       null,
-      "Feeling emotionally raw/open after a therapy session yesterday."
+      "Feeling emotionally raw/open after a therapy session yesterday.",
+      null,
+      null
     ],
     "start_date": "2020-09-10",
-    "n_days": 7,
+    "n_days": 9,
     "easy": [
       1,
       0,
@@ -2517,6 +2818,8 @@
       3,
       null,
       3,
+      null,
+      null,
       null
     ],
     "focused": [
@@ -2526,6 +2829,8 @@
       3,
       null,
       3,
+      null,
+      null,
       null
     ],
     "switching": [
@@ -2535,6 +2840,8 @@
       2,
       null,
       1,
+      null,
+      null,
       null
     ],
     "emotional-others": [
@@ -2544,6 +2851,8 @@
       1,
       null,
       1,
+      null,
+      null,
       null
     ],
     "emotional-self": [
@@ -2553,6 +2862,8 @@
       0,
       null,
       0,
+      null,
+      null,
       null
     ],
     "confident": [
@@ -2562,6 +2873,8 @@
       2,
       null,
       3,
+      null,
+      null,
       null
     ],
     "relaxed": [
@@ -2571,6 +2884,8 @@
       3,
       null,
       3,
+      null,
+      null,
       null
     ],
     "productive": [
@@ -2580,6 +2895,8 @@
       1,
       null,
       1,
+      null,
+      null,
       null
     ],
     "intention-success": [
@@ -2589,6 +2906,8 @@
       "My dose interfered with my intention",
       null,
       "I acted on my intention",
+      null,
+      null,
       null
     ]
   },
@@ -2905,7 +3224,7 @@
     ],
     "prepare-notes": [
       "Low levels of stress but not non-existent. No health issues but recently found out that heart disease runs in the family.",
-      "Havent eaten all day since muffin and latte at 9am. Could continue but will eat bc lots of work to be done. More coffee now.\n\nRunning yesterday set a good tone for today.\n\nSuper successful back to back calls with prospective  clients.\n\nMinimal stress compared to usual.",
+      "Havent eaten all day since muffin and latte at 9am. Could continue but will eat bc lots of work to be done. More coffee now.\\n\\nRunning yesterday set a good tone for today.\\n\\nSuper successful back to back calls with prospective  clients.\\n\\nMinimal stress compared to usual.",
       "Weird dreams led to slightly stressful wake up. Mood is eh to start today but excited to make the most of it.",
       "Less sleep than usual.",
       "Nope.",
@@ -3047,6 +3366,8 @@
       3,
       null,
       5,
+      null,
+      null,
       null
     ],
     "canna": [
@@ -3057,7 +3378,9 @@
       1,
       null,
       1,
-      0
+      0,
+      null,
+      null
     ],
     "supps": [
       1,
@@ -3067,6 +3390,8 @@
       1,
       null,
       1,
+      null,
+      null,
       null
     ],
     "caffeine": [
@@ -3077,7 +3402,9 @@
       1,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "nicotine": [
       0,
@@ -3087,7 +3414,9 @@
       1,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "yoga": [
       1,
@@ -3097,6 +3426,8 @@
       0,
       null,
       0,
+      null,
+      null,
       null
     ],
     "resist-train": [
@@ -3107,6 +3438,8 @@
       0,
       null,
       1,
+      null,
+      null,
       null
     ],
     "meditate": [
@@ -3117,6 +3450,8 @@
       0,
       null,
       1,
+      null,
+      null,
       null
     ],
     "intention": [
@@ -3127,6 +3462,8 @@
       "To stay grounded, focused, and positive.",
       null,
       "To stay present, focused, creative, and strategic.",
+      null,
+      null,
       null
     ],
     "prepare-notes": [
@@ -3137,10 +3474,12 @@
       "Stayed up late last night with friends and only got 6 hours of sleep.",
       null,
       "I took .5mg of Xanax last night to calm anxiety and to help me sleep. I took 100mg of Psilocybin this morning.",
+      null,
+      null,
       null
     ],
     "start_date": "2020-09-10",
-    "n_days": 7,
+    "n_days": 9,
     "easy": [
       null,
       3,
@@ -3149,7 +3488,9 @@
       null,
       null,
       1,
-      2
+      2,
+      null,
+      null
     ],
     "focused": [
       null,
@@ -3159,7 +3500,9 @@
       null,
       null,
       1,
-      2
+      2,
+      null,
+      null
     ],
     "switching": [
       null,
@@ -3169,7 +3512,9 @@
       null,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "emotional-others": [
       null,
@@ -3179,7 +3524,9 @@
       null,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "emotional-self": [
       null,
@@ -3189,7 +3536,9 @@
       null,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "confident": [
       null,
@@ -3199,7 +3548,9 @@
       null,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "relaxed": [
       null,
@@ -3209,7 +3560,9 @@
       null,
       null,
       2,
-      2
+      2,
+      null,
+      null
     ],
     "productive": [
       null,
@@ -3219,7 +3572,9 @@
       null,
       null,
       1,
-      1
+      1,
+      null,
+      null
     ],
     "intention-success": [
       null,
@@ -3229,7 +3584,9 @@
       null,
       null,
       "My dose helped me act on my intention",
-      "My dose helped me act on my intention"
+      "My dose helped me act on my intention",
+      null,
+      null
     ],
     "reflect-notes": [
       null,
@@ -3239,7 +3596,9 @@
       null,
       null,
       null,
-      "Long day on the road to Palm Springs and back. Accomplished what we travelled for, gut check time."
+      "Long day on the road to Palm Springs and back. Accomplished what we travelled for, gut check time.",
+      null,
+      null
     ]
   },
   "russ@russpfeiffer.com": {
@@ -3464,7 +3823,8 @@
       4,
       null,
       null,
-      5
+      5,
+      null
     ],
     "alcohol": [
       2,
@@ -3474,7 +3834,8 @@
       0,
       null,
       null,
-      0
+      0,
+      null
     ],
     "food": [
       0,
@@ -3484,7 +3845,8 @@
       3,
       null,
       null,
-      0
+      0,
+      null
     ],
     "canna": [
       0,
@@ -3494,7 +3856,8 @@
       0,
       null,
       null,
-      0
+      0,
+      null
     ],
     "supps": [
       0,
@@ -3504,7 +3867,8 @@
       0,
       null,
       null,
-      0
+      0,
+      null
     ],
     "caffeine": [
       1,
@@ -3514,7 +3878,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "yoga": [
       0,
@@ -3522,6 +3887,7 @@
       null,
       0,
       0,
+      null,
       null,
       null,
       null
@@ -3534,7 +3900,8 @@
       0,
       null,
       null,
-      0
+      0,
+      null
     ],
     "intention": [
       "To remain calm during work stress",
@@ -3544,7 +3911,8 @@
       "Relax take it moment by moment",
       null,
       null,
-      "To remain calm even if people try upset the apple cart"
+      "To remain calm even if people try upset the apple cart",
+      null
     ],
     "prepare-notes": [
       "Lots of business things came up the am",
@@ -3554,10 +3922,11 @@
       null,
       null,
       null,
+      null,
       null
     ],
     "start_date": "2020-09-10",
-    "n_days": 8,
+    "n_days": 9,
     "easy": [
       1,
       null,
@@ -3566,7 +3935,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "focused": [
       2,
@@ -3576,7 +3946,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "switching": [
       1,
@@ -3586,7 +3957,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "emotional-others": [
       1,
@@ -3596,7 +3968,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "emotional-self": [
       1,
@@ -3606,7 +3979,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "confident": [
       2,
@@ -3616,7 +3990,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "relaxed": [
       2,
@@ -3626,7 +4001,8 @@
       0,
       null,
       null,
-      1
+      1,
+      null
     ],
     "productive": [
       2,
@@ -3636,7 +4012,8 @@
       1,
       null,
       null,
-      1
+      1,
+      null
     ],
     "intention-success": [
       "I had trouble with my intention",
@@ -3646,7 +4023,8 @@
       "My dose helped me act on my intention",
       null,
       null,
-      "My dose helped me act on my intention"
+      "My dose helped me act on my intention",
+      null
     ],
     "reflect-notes": [
       "Tough day",
@@ -3656,7 +4034,8 @@
       null,
       null,
       null,
-      "None"
+      "None",
+      null
     ]
   },
   "thomas@newmissioncity.com": {
@@ -3668,8 +4047,7 @@
       null,
       4,
       2,
-      3,
-      null
+      3
     ],
     "alcohol": [
       0,
@@ -3679,8 +4057,7 @@
       null,
       0,
       0,
-      0,
-      null
+      0
     ],
     "food": [
       1,
@@ -3690,8 +4067,7 @@
       null,
       0,
       0,
-      0,
-      null
+      0
     ],
     "canna": [
       1,
@@ -3699,7 +4075,6 @@
       1,
       1,
       null,
-      1,
       1,
       1,
       1
@@ -3712,8 +4087,7 @@
       null,
       1,
       1,
-      1,
-      null
+      1
     ],
     "caffeine": [
       0,
@@ -3723,7 +4097,6 @@
       null,
       0,
       1,
-      0,
       1
     ],
     "nicotine": [
@@ -3733,7 +4106,6 @@
       0,
       null,
       1,
-      0,
       0,
       0
     ],
@@ -3745,8 +4117,7 @@
       null,
       "Finish headliner and stitchroom work",
       "Get my list of things done",
-      "Wrap up everything that was left to be done...",
-      null
+      "Wrap up everything that was left to be done..."
     ],
     "start_date": "2020-09-11",
     "n_days": 8,
@@ -3758,7 +4129,6 @@
       null,
       null,
       3,
-      null,
       1
     ],
     "focused": [
@@ -3769,7 +4139,6 @@
       null,
       null,
       1,
-      null,
       1
     ],
     "switching": [
@@ -3780,7 +4149,6 @@
       null,
       null,
       1,
-      null,
       1
     ],
     "emotional-others": [
@@ -3791,7 +4159,6 @@
       null,
       null,
       2,
-      null,
       1
     ],
     "emotional-self": [
@@ -3802,7 +4169,6 @@
       null,
       null,
       2,
-      null,
       1
     ],
     "confident": [
@@ -3813,7 +4179,6 @@
       null,
       null,
       1,
-      null,
       1
     ],
     "relaxed": [
@@ -3824,7 +4189,6 @@
       null,
       null,
       2,
-      null,
       1
     ],
     "productive": [
@@ -3835,7 +4199,6 @@
       null,
       null,
       0,
-      null,
       1
     ],
     "intention-success": [
@@ -3846,7 +4209,6 @@
       null,
       null,
       "My dose helped me act on my intention",
-      null,
       "My dose had no impact on my intention"
     ]
   },
