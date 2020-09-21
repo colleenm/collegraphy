@@ -488,7 +488,7 @@ function createJournalTable(data, startDateIndex) {
 
     let intention = document.createElement('div')
     intention.classList.add('intention-content')
-    if (data['intention'][item] != null) {
+    if (data['intention'] && data['intention'][item] != null) {
       intention.append(...newlineToBr(data['intention'][item]))
     } else {
       let noneToday = document.createElement('em')
@@ -504,7 +504,7 @@ function createJournalTable(data, startDateIndex) {
     let intentionSuccess = document.createElement('div')
     intentionSuccess.classList.add('intention-content')
 
-    if (data['intention-success'][item] != null) {
+    if (data['intentino-success'] && data['intention-success'][item] != null) {
       intentionSuccess.append(...newlineToBr(data['intention-success'][item]))
     } else {
       let noneToday = document.createElement('em')
@@ -520,7 +520,7 @@ function createJournalTable(data, startDateIndex) {
     let prepareNotes = document.createElement('div')
     prepareNotes.classList.add('intention-content')
 
-    if (data['prepare-notes'][item] != null) {
+    if (data['prepare-notes'] && data['prepare-notes'][item] != null) {
       prepareNotes.append(...newlineToBr(data['prepare-notes'][item]))
     } else {
       let noneToday = document.createElement('em')
@@ -536,7 +536,7 @@ function createJournalTable(data, startDateIndex) {
     let reflectNotes = document.createElement('div')
     reflectNotes.classList.add('intention-content')
 
-    if (data['reflect-notes'][item] != null) {
+    if (data['reflect-notes'] && data['reflect-notes'][item] != null) {
       reflectNotes.append(...newlineToBr(data['reflect-notes'][item]))
     } else {
       let noneToday = document.createElement('em')
