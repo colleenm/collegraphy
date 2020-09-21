@@ -396,6 +396,19 @@ function createConfoundTable(data, startDateIndex) {
   tableEl.appendChild(tBody)
 }
 
+function newlineToBr(string) {
+  let chunks = string.split('\n\n')
+  let nodeList = [];
+  for (chunk of chunks) {
+    nodeList.push(chunk.replace(/\n/g, ''))
+    if (chunks.indexOf(chunk) != (chunks.length - 1) &&
+      chunks.length != 1) {
+      nodeList.push(document.createElement('br'))
+      nodeList.push(document.createElement('br'))
+    }
+  }
+  return nodeList
+}
 
 function createJournalTable(data, startDateIndex) {
   let tableEl = document.getElementById('journalTable');
@@ -404,7 +417,7 @@ function createJournalTable(data, startDateIndex) {
   let titleRow = document.createElement('tr')
   let title = document.createElement('th')
   title.setAttribute('colspan', 2)
-  title.appendChild(document.createTextNode('Intentions & notes'))
+  title.append('Intentions & notes')
   titleRow.appendChild(title)
   tBody.appendChild(titleRow)
 
@@ -414,7 +427,7 @@ function createJournalTable(data, startDateIndex) {
     let row = document.createElement('tr')
     let dateCell = document.createElement('td')
     dateCell.classList.add('journal-date')
-    dateCell.appendChild(document.createTextNode(slicedDateLabels[item]));
+    dateCell.append(slicedDateLabels[item])
     row.appendChild(dateCell)
 
     let infoCell = document.createElement('td')
@@ -423,63 +436,63 @@ function createJournalTable(data, startDateIndex) {
     // Your intention
     let intentionHeader = document.createElement('div')
     intentionHeader.classList.add('intention-heading')
-    intentionHeader.append(document.createTextNode('Your intention'))
+    intentionHeader.append('Your intention')
 
     let intention = document.createElement('div')
     intention.classList.add('intention-content')
     if (data['intention'][item] != null) {
-      intention.append(document.createTextNode(data['intention'][item]))
+      intention.append(...newlineToBr(data['intention'][item]))
     } else {
       let noneToday = document.createElement('em')
-      noneToday.append(document.createTextNode('No intention set'))
+      noneToday.append('No intention set')
       intention.append(noneToday)
     }
 
     // How'd that go?
     let intentionSuccessHeader = document.createElement('div')
     intentionSuccessHeader.classList.add('intention-heading')
-    intentionSuccessHeader.append(document.createTextNode('How\'d that go?'))
+    intentionSuccessHeader.append('How\'d that go?')
 
     let intentionSuccess = document.createElement('div')
     intentionSuccess.classList.add('intention-content')
 
     if (data['intention-success'][item] != null) {
-      intentionSuccess.append(document.createTextNode(data['intention-success'][item]))
+      intentionSuccess.append(...newlineToBr(data['intention-success'][item]))
     } else {
       let noneToday = document.createElement('em')
-      noneToday.append(document.createTextNode('No response'))
+      noneToday.append('No response')
       intentionSuccess.append(noneToday)
     }
 
     // Morning notes
     let prepareNotesHeader = document.createElement('div')
     prepareNotesHeader.classList.add('intention-heading')
-    prepareNotesHeader.append(document.createTextNode('Your morning notes'))
+    prepareNotesHeader.append('Your morning notes')
 
     let prepareNotes = document.createElement('div')
     prepareNotes.classList.add('intention-content')
 
     if (data['prepare-notes'][item] != null) {
-      prepareNotes.append(document.createTextNode(data['prepare-notes'][item]))
+      prepareNotes.append(...newlineToBr(data['prepare-notes'][item]))
     } else {
       let noneToday = document.createElement('em')
-      noneToday.append(document.createTextNode('No morning notes'))
+      noneToday.append('No morning notes')
       prepareNotes.append(noneToday)
     }
 
     // Reflections
     let reflectNotesHeader = document.createElement('div')
     reflectNotesHeader.classList.add('intention-heading')
-    reflectNotesHeader.append(document.createTextNode('Your reflections'))
+    reflectNotesHeader.append('Your reflections')
 
     let reflectNotes = document.createElement('div')
     reflectNotes.classList.add('intention-content')
 
     if (data['reflect-notes'][item] != null) {
-      reflectNotes.append(document.createTextNode(data['reflect-notes'][item]))
+      reflectNotes.append(...newlineToBr(data['reflect-notes'][item]))
     } else {
       let noneToday = document.createElement('em')
-      noneToday.append(document.createTextNode('No other reflections'))
+      noneToday.append('No other reflections')
       reflectNotes.append(noneToday)
     }
 
