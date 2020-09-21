@@ -121,7 +121,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       {
         data: data[moods[0]],
         yAxisID: 'likert',
-        label: moodLabels[0],
+        label: firstChartMoodLabels[0],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(243,93,147,' + opacity + ')',
         borderWidth: lineWidth
@@ -131,7 +131,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         data: padValues(data[moods[1]], 0.05),
         //data: data[moods[1]],
         yAxisID: 'likert',
-        label: moodLabels[1],
+        label: firstChartMoodLabels[1],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(255,153,0,' + opacity + ')',
         borderWidth: lineWidth
@@ -141,7 +141,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         data: padValues(data[moods[2]], 0.1),
         //data: data[moods[2]],
         yAxisID: 'likert',
-        label: moodLabels[2],
+        label: firstChartMoodLabels[2],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(44,232,0,' + opacity + ')',
         borderWidth: lineWidth
@@ -150,7 +150,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       {
         data: padValues(data[moods[3]], .15),
         //data: data[moods[3]],
-        label: moodLabels[3],
+        label: firstChartMoodLabels[3],
         yAxisID: 'likert',
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(11,113,0,' + opacity + ')',
