@@ -15,7 +15,7 @@ const jsonFile = './all_metrics_clean.json'
 const dates = ['2020-09-09', '2020-09-10', '2020-09-11',
   '2020-09-12', '2020-09-13', '2020-09-14', '2020-09-15',
   '2020-09-16', '2020-09-17', '2020-09-18']
-const dateLabels = ['9/9', '9/10', '9/11', '9/12', '9/13', '9/14', '9/15',
+const dateLabels = ['9/9', '9/10', '9/11', "9/12", '9/13', '9/14', '9/15',
   '9/16', '9/17', '9/18'];
 
 window.addEventListener('load', (event) => {
@@ -47,13 +47,9 @@ function main(data) {
     }
   }
 
-  let moodChartData1 = createMoodChartData(userData, startDateIndex, 1);
-  let moodChartCanv1 = document.getElementById('moodChart1');
-  createMoodChart(moodChartCanv1, moodChartData1);
-
-  let moodChartData2 = createMoodChartData(userData, startDateIndex, 2);
-  let moodChartCanv2 = document.getElementById('moodChart2');
-  createMoodChart(moodChartCanv2, moodChartData2);
+  let moodChartData = createMoodChartData(userData, startDateIndex);
+  let moodChartCanv = document.getElementById('moodChart');
+  createMoodChart(moodChartCanv, moodChartData);
 
   let confoundChartData = createConfoundChartData(userData, startDateIndex);
   createConfoundChart(confoundChartData);
@@ -73,8 +69,9 @@ function createMoodChart(canv, chartData) {
         display: false,
       },
       legend: {
-        position: 'bottom'
+        position: 'right'
       },
+
       scales: {
         yAxes: [
           {
@@ -82,6 +79,7 @@ function createMoodChart(canv, chartData) {
             position: 'left',
             ticks: {
               min: 0,
+              max: 4,
               callback: function (value) {
                 let labels = ['Strongly disagree', 'Disagree', 'Neither', 'Agree', 'Strongly agree']
                 return labels[value]
@@ -111,6 +109,8 @@ const secondChartMoodLabels = ['Relaxed', 'Confident', 'Emotional awareness (oth
 function createMoodChartData(data, startDateIndex, chartNumber) {
   let moods = chartNumber == 1 ? firstChartMoods : secondChartMoods
   let moodLabels = chartNumber == 1 ? firstChartMoodLabels : secondChartMoodLabels
+  let lineWidth = 3;
+  let opacity = .6;
 
   return {
     labels: dateLabels.slice(startDateIndex),
@@ -119,40 +119,88 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         data: data[moods[0]],
         yAxisID: 'likert',
         label: moodLabels[0],
-        backgroundColor: 'rgba(0,0,0,0)', //'rgba(255, 99, 132, 0.2)',
-        borderColor: 'rgba(255, 99, 132, 1)',
-        borderWidth: 1
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(243,93,147,' + opacity + ')',
+        borderWidth: lineWidth
       },
 
       {
-        data: data[moods[1]],
+        data: padValues(data[moods[1]], 0.05),
+        //data: data[moods[1]],
         yAxisID: 'likert',
         label: moodLabels[1],
-        //backgroundColor: 'rgba(54, 162, 235, 0.2)',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(54, 162, 235, 1)',
-        borderWidth: 1
+        borderColor: 'rgba(255,153,0,' + opacity + ')',
+        borderWidth: lineWidth
       },
 
       {
-        data: data[moods[2]],
+        data: padValues(data[moods[2]], 0.1),
+        //data: data[moods[2]],
         yAxisID: 'likert',
         label: moodLabels[2],
-        //backgroundColor: 'rgba(255, 206, 86, 0.2)',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(255, 206, 86, 1)',
-        borderWidth: 1
+        borderColor: 'rgba(44,232,0,' + opacity + ')',
+        borderWidth: lineWidth
       },
 
       {
-        data: data[moods[3]],
+        data: padValues(data[moods[3]], .15),
+        //data: data[moods[3]],
         label: moodLabels[3],
         yAxisID: 'likert',
-        //backgroundColor: 'rgba(75, 192, 192, 0.2)',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(75, 192, 192, 1)',
-        borderWidth: 1
+        borderColor: 'rgba(11,113,0,' + opacity + ')',
+        borderWidth: lineWidth
       },
+
+      /* TEST OF ALL LINES ON SAME GRAPH *************************/
+
+      {
+        data: padValues(data[secondChartMoods[1]], 0.2),
+        //data: data[secondChartMoods[0]],
+        yAxisID: 'likert',
+        label: secondChartMoodLabels[0],
+        backgroundColor: 'rgba(0,0,0,0)', //'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(73,212,200,' + opacity + ')',
+        borderWidth: lineWidth
+      },
+
+      {
+        data: padValues(data[secondChartMoods[1]], 0.25),
+        //data: data[moods[1]],
+        yAxisID: 'likert',
+        label: secondChartMoodLabels[1],
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(66,157,255,' + opacity + ')',
+        borderWidth: lineWidth
+      },
+
+      {
+        data: padValues(data[secondChartMoods[2]], 0.3),
+        //data: data[moods[2]],
+        yAxisID: 'likert',
+        label: secondChartMoodLabels[2],
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(100,61,28,' + opacity + ')',
+        borderWidth: lineWidth
+      },
+
+      {
+        data: padValues(data[secondChartMoods[3]], .35),
+        //data: data[moods[3]],
+        label: secondChartMoodLabels[3],
+        yAxisID: 'likert',
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(100,100,100,' + opacity + ')',
+        borderWidth: lineWidth
+      },
+
+
+
+
+
+
 
       // invisible bars to change alignment of sleep bar
       {
@@ -161,7 +209,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         yAxisID: 'sleep',
         label: '',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(255,0,0,0)',
+        borderColor: 'rgba(0,0,0,0)',
         borderWidth: 1,
         barThickness: 12,
       },
@@ -172,7 +220,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         yAxisID: 'sleep',
         label: '',
         backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,255,0,0)',
+        borderColor: 'rgba(0,0,0,0)',
         borderWidth: 1,
         barThickness: 24
       },
@@ -182,8 +230,8 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         data: data['sleep'],
         yAxisID: 'sleep',
         label: 'Sleep quality',
-        backgroundColor: 'rgba(0,0,0,0.2)',
-        borderColor: 'rgba(0,0,0,0.6)',
+        backgroundColor: 'rgba(68,63,181,0.3)',
+        borderColor: 'rgba(0,0,0,0.2)',
         borderWidth: 1,
         barThickness: 24,
       },
@@ -215,7 +263,7 @@ function createConfoundChart(chartData) {
         display: false,
       },
       legend: {
-        position: 'bottom'
+        position: 'right'
       },
       scales: {
         yAxes: [
@@ -250,6 +298,10 @@ function createConfoundChart(chartData) {
 }
 
 
+function padValues(data, padding) {
+  return data.map((value) => Math.min(4, value + padding))
+}
+
 function createConfoundChartData(data, startDateIndex) {
   let barThickness = 28
   let barPercentage = .6
@@ -262,8 +314,9 @@ function createConfoundChartData(data, startDateIndex) {
         data: data['alcohol'],
         yAxisID: 'alcohol',
         label: 'Drinks last night',
-        backgroundColor: 'rgba(255, 206, 86, 0.2)',
-        borderColor: 'rgba(255, 206, 86, 1)',
+        //backgroundColor: 'rgba(255, 206, 86, 0.2)',
+        backgroundColor: 'rgba(68,63,181,0.5)',
+        //borderColor: 'rgba(255, 206, 86, 1)',
         borderWidth: 1,
         barPercentage: barPercentage,
         categoryPercentage: categoryPercentage,
@@ -274,8 +327,10 @@ function createConfoundChartData(data, startDateIndex) {
         data: data['food'],
         yAxisID: 'food',
         label: 'This morning\'s meal',
-        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-        borderColor: 'rgba(75, 192, 192, 1)',
+        //backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        backgroundColor: 'rgba(66,157,255,.5)',
+        borderColor: 'rgba(0,0,0,0)',
+        //borderColor: 'rgba(75, 192, 192, 1)',
         borderWidth: 1,
         barPercentage: barPercentage,
         categoryPercentage: categoryPercentage,
