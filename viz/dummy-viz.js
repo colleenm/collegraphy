@@ -49,6 +49,9 @@ function main(data) {
 
   Chart.defaults.global.defaultFontSize = 13;
 
+  let dateTableEl = document.getElementById('dateTable')
+  createDateTable(dateTableEl, data, startDateIndex)
+
   let moodChartData = createMoodChartData(userData, startDateIndex);
   let moodChartCanv = document.getElementById('moodChart');
   createMoodChart(moodChartCanv, moodChartData);
@@ -102,6 +105,56 @@ function createMoodChart(canv, chartData) {
       }
     }
   })
+}
+
+function createDateTable(tableEl, data, startDateIndex) {
+  let datesRow = document.createElement('tr')
+  for (dateLabel of dateLabels.slice(startDateIndex)) {
+    let dateCell = document.createElement('td')
+    if (dateLabel === '9/12' || dateLabel === '9/15' ||
+      dateLabel === '9/16') {
+      dateCell.classList.add('left-cell-border')
+    }
+    if (dateLabel === '9/12' || dateLabel === '9/13' || dateLabel === '9/14' ||
+      dateLabel === '9/16' || dateLabel === '9/17' || dateLabel === '9/18') {
+      dateCell.classList.add('color-cell')
+    }
+    dateCell.append(dateLabel)
+    datesRow.append(dateCell)
+  }
+
+  let formulaRow = document.createElement('tr')
+
+  let baseline = document.createElement('td')
+  let baselineDays = 3 - startDateIndex
+  baseline.setAttribute('colspan', baselineDays)
+  baseline.append('Baseline')
+  formulaRow.append(baseline)
+
+
+  let formulaA = document.createElement('td')
+  formulaA.setAttribute('colspan', 3)
+  formulaA.classList.add('color-cell', 'left-cell-border')
+  formulaA.append('Formula A')
+  formulaRow.append(formulaA)
+
+  let dayOff = document.createElement('td')
+  dayOff.setAttribute('colspan', 1)
+  dayOff.classList.add('left-cell-border')
+  dayOff.append('Day off')
+  formulaRow.append(dayOff)
+
+
+  let formulaB = document.createElement('td')
+  formulaB.setAttribute('colspan', 3)
+  formulaB.classList.add('color-cell', 'left-cell-border')
+  formulaB.append('Formula B')
+  formulaRow.append(formulaB)
+
+
+  tableEl.append(datesRow)
+  tableEl.append(formulaRow)
+
 }
 
 const firstChartMoods = ['easy', 'focused', 'switching', 'productive'];
@@ -417,14 +470,6 @@ function createJournalTable(data, startDateIndex) {
   let tableEl = document.getElementById('journalTable');
   let tBody = document.createElement('tbody');
 
-  let titleRow = document.createElement('tr')
-  let title = document.createElement('th')
-  title.setAttribute('colspan', 2)
-  title.append('Intentions & notes')
-  titleRow.appendChild(title)
-  tBody.appendChild(titleRow)
-
-  // TODO how to deal with blank days?
   let slicedDateLabels = dateLabels.slice(startDateIndex)
   for (item in dates.slice(startDateIndex)) {
     let row = document.createElement('tr')

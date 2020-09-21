@@ -14,18 +14,74 @@
         margin-bottom: 32px;
       }
 
+      .header-div {
+        border-bottom: 3px rgba(0,21,131) solid;
+        color: rgba(0,21,131);
+        padding: 12px;
+        padding-top: 0;
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .header-div * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      h1 {
+        font-weight: 500;
+        letter-spacing: 2;
+        margin-left: 12px;
+      }
+
+      h2 {
+        font-weight: normal;
+        letter-spacing: 1;
+        margin-left: 24px;
+        margin-bottom: 16px;
+        color: #666;
+      }
+
+      img {
+        margin-right: 12px;
+      }
+
+      #dateTable {
+        font-size: 1.2em;
+        font-family: inherit;
+        margin-left: 44px;
+        border-spacing: 0;
+        text-align: center;
+        color: #666;
+      }
+
+      #dateTable td {
+        padding: 12px;
+        min-width: 40px;
+      }
+
+      #dateTable td.color-cell {
+        background: rgba(68,63,181,0.3);
+      }
+
+      #dateTable td.left-cell-border {
+        border-left: 1px solid #999;
+      }
+
+      #dateTable tr:first-child td {
+        border-bottom: 1px solid #999;
+      }
+
+      #dateTable td:last-child td {
+        padding-top: 12px;
+      }
+
       #moodChart, #confoundChart {
         margin-left: 40px;
       }
 
-      #moodChart {
-        width: 920px;
-        height: 450px;
-      }
-
       #confoundChart {
-        width: 884px;
-        height: 400px;
         padding-left: 54px;
       }
 
@@ -52,7 +108,7 @@
 
       #confoundTable td.boolCell {
         font-size: 2em;
-        color: #5f6ee0;
+        color: rgba(0,21,131);
       }
 
       #confoundTable td:first-child {
@@ -71,15 +127,17 @@
         width: 800px;
         font-size: 1em;
         border-spacing: 0;
-        margin-top: 140px;
         margin-left: 20px;
+        margin-top: 24px;
       }
 
       #journalTable th {
         text-align: center;
-        font-size: 1.2em;
+        font-size: 1.4em;
+        font-weight: normal;
         letter-spacing: 1px;
         color: #666;
+        color: rgba(0,21,131);
         padding-bottom: 16px;
       }
 
@@ -122,9 +180,22 @@
   </head>
 
   <body>
-    <canvas id="moodChart"></canvas>
-    <canvas id="confoundChart"></canvas>
+    <div class="header-div">
+      <h1>Your Alpha Trial</h1>
+      <img src="./logo.svg"/>
+    </div>
+    <h2>Schedule</h2>
+    <table id="dateTable"></table>
+    <h2>Your experience</h2>
+    <canvas id="moodChart" width="920" height="350"></canvas>
+    <h2>Non-cannabis influences</h2>
+    <canvas id="confoundChart" width="884" height="200"></canvas>
     <table id="confoundTable"></table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>Intentions & notes</h2>
     <table id="journalTable"></table>
   </body>
 </html>
