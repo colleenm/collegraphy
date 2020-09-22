@@ -425,13 +425,18 @@ function createConfoundTable(data, startDateIndex) {
       let titleCell = document.createElement('td')
       titleCell.appendChild(document.createTextNode(confoundLabels[item]));
       row.appendChild(titleCell)
+      let maxCells = dateLabels.slice(startDateIndex).length
+      let index = 0
       for (day of data[item]) {
-        let cell = document.createElement('td');
-        cell.classList.add(booleanCellClass);
-        let text = day ? '•' : ''
-        let textEl = document.createTextNode(text)
-        cell.appendChild(textEl)
-        row.appendChild(cell)
+        if (index < maxCells) {
+          let cell = document.createElement('td');
+          cell.classList.add(booleanCellClass);
+          let text = day ? '•' : ''
+          let textEl = document.createTextNode(text)
+          cell.appendChild(textEl)
+          row.appendChild(cell)
+        }
+        index++
       }
       tBody.appendChild(row)
     }
@@ -504,7 +509,7 @@ function createJournalTable(data, startDateIndex) {
     let intentionSuccess = document.createElement('div')
     intentionSuccess.classList.add('intention-content')
 
-    if (data['intentino-success'] && data['intention-success'][item] != null) {
+    if (data['intention-success'] && data['intention-success'][item] != null) {
       intentionSuccess.append(...newlineToBr(data['intention-success'][item]))
     } else {
       let noneToday = document.createElement('em')
