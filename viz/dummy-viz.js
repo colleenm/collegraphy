@@ -196,7 +196,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[1]], 0.05),
+        data: padValues(data[moods[1]], 0.02),
         yAxisID: 'likert',
         label: moodLabels[1],
         backgroundColor: 'rgba(0,0,0,0)',
@@ -205,7 +205,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[2]], 0.1),
+        data: padValues(data[moods[2]], 0.04),
         yAxisID: 'likert',
         label: moodLabels[2],
         backgroundColor: 'rgba(0,0,0,0)',
@@ -214,7 +214,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[3]], .15),
+        data: padValues(data[moods[3]], .06),
         label: moodLabels[3],
         yAxisID: 'likert',
         backgroundColor: 'rgba(0,0,0,0)',
@@ -223,7 +223,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[4]], 0),
+        data: padValues(data[moods[4]], .08),
         yAxisID: 'likert',
         label: moodLabels[4],
         backgroundColor: 'rgba(0,0,0,0)',
@@ -232,7 +232,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[5]], -0.05),
+        data: padValues(data[moods[5]], -0.02),
         yAxisID: 'likert',
         label: moodLabels[5],
         backgroundColor: 'rgba(0,0,0,0)',
@@ -241,7 +241,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[6]], -0.1),
+        data: padValues(data[moods[6]], -0.04),
         yAxisID: 'likert',
         label: moodLabels[6],
         backgroundColor: 'rgba(0,0,0,0)',
@@ -250,7 +250,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       },
 
       {
-        data: padValues(data[moods[7]], -0.15),
+        data: padValues(data[moods[7]], -0.06),
         label: moodLabels[7],
         yAxisID: 'likert',
         backgroundColor: 'rgba(0,0,0,0)',
@@ -258,12 +258,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         borderWidth: lineWidth
       },
 
-
-
-
-
-
-
+      //
       // invisible bars to change alignment of sleep bar
       {
         type: 'bar',
