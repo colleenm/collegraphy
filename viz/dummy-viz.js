@@ -40,10 +40,10 @@ function main(data) {
   let email = qString.slice(qString.indexOf('=') + 1)
   console.log('Setting current user to ' + email)
   currentUser = email
+  let userData = data[currentUser]
   console.log('data for this user:')
   console.log(userData)
 
-  let userData = data[currentUser]
   modMoodData(userData)
 
   // some users wont' start on the first date in dates[], figure out when
@@ -91,8 +91,9 @@ function modMoodData(data) {
   }
 
   // date shift
-  for (mood of moods) {
+  for (mood of moods.concat(['sleep'])) {
     data[mood].unshift(Number.NaN)
+    data[mood].push(Number.NaN)
   }
 }
 
@@ -185,7 +186,7 @@ function createMoodChart(canv, chartData) {
               stepSize: 1,
             }
           }
-        ]
+        ],
       }
     }
   })
@@ -196,7 +197,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
   let lineWidth = 3;
   let opacity = .6;
   let shiftedDateLabels = [''].concat(
-    dateLabels.slice(startDateIndex))
+    dateLabels.slice(startDateIndex)).concat([''])
 
   return {
     labels: shiftedDateLabels,
@@ -275,39 +276,17 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
 
 
       // invisible bars to change alignment of sleep bar
-
       {
         type: 'bar',
         data: data['sleep'],
         yAxisID: 'sleep',
-        label: 'Sleep quality',
+        label: 'Previous night\'s sleep',
         backgroundColor: 'rgba(68,63,181,0.3)',
         borderColor: 'rgba(0,0,0,0.2)',
         borderWidth: 1,
         barThickness: 24,
       },
 
-      {
-        type: 'bar',
-        data: data['sleep'],
-        yAxisID: 'sleep',
-        label: '',
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,255,0,0)',
-        borderWidth: 1,
-        barThickness: 24
-      },
-
-      {
-        type: 'bar',
-        data: data['sleep'],
-        yAxisID: 'sleep',
-        label: '',
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,0,255,0)',
-        borderWidth: 1,
-        barThickness: 12
-      }
     ]
   }
 }
