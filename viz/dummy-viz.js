@@ -40,10 +40,10 @@ function main(data) {
   let email = qString.slice(qString.indexOf('=') + 1)
   console.log('Setting current user to ' + email)
   currentUser = email
+  let userData = data[currentUser]
   console.log('data for this user:')
   console.log(userData)
 
-  let userData = data[currentUser]
   modMoodData(userData)
 
   // some users wont' start on the first date in dates[], figure out when
