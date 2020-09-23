@@ -1,14 +1,12 @@
-/* I apologize for all the code in this file.
+/*
+ * I apologize for all the code in this file.
+ *
  * Notes:
  *  - constants are defined immediately before teh function in which they are used
  *
- * - cmckenzie
+ * -- cmckenzie
  */
 
-/*
- * TODO
- *  - none of this accounts for dates with no data
- */
 
 const jsonFile = './all_metrics_clean.json'
 
@@ -36,14 +34,20 @@ window.addEventListener('load', (event) => {
 });
 
 function main(data) {
+  // Get user from querystring
+  // (URL should have querystring like "email=user@service.com")
   let qString = window.location.search
   let email = qString.slice(qString.indexOf('=') + 1)
   console.log('Setting current user to ' + email)
   currentUser = email
-  let userData = data[currentUser]
   console.log('data for this user:')
   console.log(userData)
 
+  let userData = data[currentUser]
+  modMoodData(userData)
+
+  // some users wont' start on the first date in dates[], figure out when
+  // they start
   let startDateIndex = 0;
 
   if (userData['start_date'] && userData['start_date'] != '2020-09-9') {
@@ -58,8 +62,6 @@ function main(data) {
   let dateTableEl = document.getElementById('dateTable')
   createDateTable(dateTableEl, data, startDateIndex)
 
-  nullToNaN(userData)
-
   let moodChartData = createMoodChartData(userData, startDateIndex);
   let moodChartCanv = document.getElementById('moodChart');
   createMoodChart(moodChartCanv, moodChartData);
@@ -73,13 +75,24 @@ function main(data) {
 }
 
 
-function nullToNaN(data) {
+/* Does two things:
+ *  - replaces null values with NaN so chart.js knows not to plot them as 0
+ *  - moves all reflect survey values forward one day to make sleep bars look
+ *    more like a real timeline
+ */
+function modMoodData(data) {
+  // null to NaN
   for (mood of moods) {
     for (day in mood) {
       if (data[mood][day] == null) {
         data[mood][day] = Number.NaN
       }
     }
+  }
+
+  // date shift
+  for (mood of moods) {
+    data[mood].unshift(Number.NaN)
   }
 }
 
@@ -182,9 +195,11 @@ function createMoodChart(canv, chartData) {
 function createMoodChartData(data, startDateIndex, chartNumber) {
   let lineWidth = 3;
   let opacity = .6;
+  let shiftedDateLabels = [''].concat(
+    dateLabels.slice(startDateIndex))
 
   return {
-    labels: dateLabels.slice(startDateIndex),
+    labels: shiftedDateLabels,
     datasets: [
       {
         data: data[moods[0]],
@@ -258,29 +273,8 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         borderWidth: lineWidth
       },
 
-      //
-      // invisible bars to change alignment of sleep bar
-      {
-        type: 'bar',
-        data: data['sleep'],
-        yAxisID: 'sleep',
-        label: '',
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,0,0,0)',
-        borderWidth: 1,
-        barThickness: 12,
-      },
 
-      {
-        type: 'bar',
-        data: data['sleep'],
-        yAxisID: 'sleep',
-        label: '',
-        backgroundColor: 'rgba(0,0,0,0)',
-        borderColor: 'rgba(0,0,0,0)',
-        borderWidth: 1,
-        barThickness: 24
-      },
+      // invisible bars to change alignment of sleep bar
 
       {
         type: 'bar',
@@ -293,6 +287,16 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
         barThickness: 24,
       },
 
+      {
+        type: 'bar',
+        data: data['sleep'],
+        yAxisID: 'sleep',
+        label: '',
+        backgroundColor: 'rgba(0,0,0,0)',
+        borderColor: 'rgba(0,255,0,0)',
+        borderWidth: 1,
+        barThickness: 24
+      },
 
       {
         type: 'bar',
