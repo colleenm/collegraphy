@@ -8,7 +8,8 @@
  */
 
 
-const jsonFile = './all_metrics_clean.json'
+//const jsonFile = './all_metrics_clean.json'
+const jsonFile = './alpha_data.json'
 
 const dates = ['2020-09-09', '2020-09-10', '2020-09-11',
   '2020-09-12', '2020-09-13', '2020-09-14', '2020-09-15',
@@ -45,6 +46,9 @@ function main(data) {
   console.log(userData)
 
   modMoodData(userData)
+
+  console.log('modded data')
+  console.log(userData)
 
   // some users wont' start on the first date in dates[], figure out when
   // they start
@@ -83,8 +87,11 @@ function main(data) {
 function modMoodData(data) {
   // null to NaN
   for (mood of moods) {
-    for (day in mood) {
+    console.log('looking at mood ' + mood)
+    for (day in data[mood]) {
+      console.log('looking at day ' + day + ' of ' + data[mood])
       if (data[mood][day] == null) {
+        console.log('changing null to NaN')
         data[mood][day] = Number.NaN
       }
     }
