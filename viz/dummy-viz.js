@@ -18,6 +18,12 @@ const dates = ['2020-09-09', '2020-09-10', '2020-09-11',
 const dateLabels = ['9/9', '9/10', '9/11', "9/12", '9/13', '9/14', '9/15',
   '9/16', '9/17', '9/18'];
 
+const moods = ['easy', 'focused', 'switching', 'productive', 'relaxed',
+  'confident', 'emotional-others', 'emotional-self']
+const moodLabels = ['Ease', 'Focus', 'Ease of task switching', 'Productivity',
+  'Relaxed', 'Confident', 'Emotional awareness (others)', 'Emotional awareness (self)']
+
+
 window.addEventListener('load', (event) => {
   const req = new Request(jsonFile)
   fetch(req)
@@ -52,6 +58,8 @@ function main(data) {
   let dateTableEl = document.getElementById('dateTable')
   createDateTable(dateTableEl, data, startDateIndex)
 
+  nullToNaN(userData)
+
   let moodChartData = createMoodChartData(userData, startDateIndex);
   let moodChartCanv = document.getElementById('moodChart');
   createMoodChart(moodChartCanv, moodChartData);
@@ -64,48 +72,17 @@ function main(data) {
   createJournalTable(userData, startDateIndex);
 }
 
-function createMoodChart(canv, chartData) {
-  let chart = new Chart(canv, {
-    type: 'line',
-    data: chartData,
-    options: {
-      responsive: false,
-      title: {
-        display: false,
-      },
-      legend: {
-        position: 'right'
-      },
-      defaultFontSize: 16,
 
-      scales: {
-        yAxes: [
-          {
-            id: 'likert',
-            position: 'left',
-            ticks: {
-              min: 0,
-              max: 4,
-              callback: function (value) {
-                let labels = ['Strongly disagree', 'Disagree', 'Neither', 'Agree', 'Strongly agree']
-                return labels[value]
-              }
-            }
-          },
-          {
-            id: 'sleep',
-            position: 'right',
-            ticks: {
-              min: 1,
-              max: 5,
-              stepSize: 1,
-            }
-          }
-        ]
+function nullToNaN(data) {
+  for (mood of moods) {
+    for (day in mood) {
+      if (data[mood][day] == null) {
+        data[mood][day] = Number.NaN
       }
     }
-  })
+  }
 }
+
 
 function createDateTable(tableEl, data, startDateIndex) {
   let datesRow = document.createElement('tr')
@@ -157,14 +134,52 @@ function createDateTable(tableEl, data, startDateIndex) {
 
 }
 
-const firstChartMoods = ['easy', 'focused', 'switching', 'productive'];
-const firstChartMoodLabels = ['Ease', 'Focus', 'Ease of task switching', 'Productivity'];
-const secondChartMoods = ['relaxed', 'confident', 'emotional-others', 'emotional-self'];
-const secondChartMoodLabels = ['Relaxed', 'Confident', 'Emotional awareness (others)', 'Emotional awareness (self)'];
+
+function createMoodChart(canv, chartData) {
+  let chart = new Chart(canv, {
+    type: 'line',
+    data: chartData,
+    options: {
+      responsive: false,
+      title: {
+        display: false,
+      },
+      legend: {
+        position: 'right'
+      },
+      defaultFontSize: 16,
+
+      scales: {
+        yAxes: [
+          {
+            id: 'likert',
+            position: 'left',
+            ticks: {
+              min: 0,
+              max: 4,
+              callback: function (value) {
+                let labels = ['Strongly disagree', 'Disagree', 'Neither', 'Agree', 'Strongly agree']
+                return labels[value]
+              }
+            }
+          },
+          {
+            id: 'sleep',
+            position: 'right',
+            ticks: {
+              min: 1,
+              max: 5,
+              stepSize: 1,
+            }
+          }
+        ]
+      }
+    }
+  })
+}
+
 
 function createMoodChartData(data, startDateIndex, chartNumber) {
-  let moods = chartNumber == 1 ? firstChartMoods : secondChartMoods
-  let moodLabels = chartNumber == 1 ? firstChartMoodLabels : secondChartMoodLabels
   let lineWidth = 3;
   let opacity = .6;
 
@@ -174,7 +189,7 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
       {
         data: data[moods[0]],
         yAxisID: 'likert',
-        label: firstChartMoodLabels[0],
+        label: moodLabels[0],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(243,93,147,' + opacity + ')',
         borderWidth: lineWidth
@@ -182,9 +197,8 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
 
       {
         data: padValues(data[moods[1]], 0.05),
-        //data: data[moods[1]],
         yAxisID: 'likert',
-        label: firstChartMoodLabels[1],
+        label: moodLabels[1],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(255,153,0,' + opacity + ')',
         borderWidth: lineWidth
@@ -192,9 +206,8 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
 
       {
         data: padValues(data[moods[2]], 0.1),
-        //data: data[moods[2]],
         yAxisID: 'likert',
-        label: firstChartMoodLabels[2],
+        label: moodLabels[2],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(44,232,0,' + opacity + ')',
         borderWidth: lineWidth
@@ -202,50 +215,43 @@ function createMoodChartData(data, startDateIndex, chartNumber) {
 
       {
         data: padValues(data[moods[3]], .15),
-        //data: data[moods[3]],
-        label: firstChartMoodLabels[3],
+        label: moodLabels[3],
         yAxisID: 'likert',
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(11,113,0,' + opacity + ')',
         borderWidth: lineWidth
       },
 
-      /* TEST OF ALL LINES ON SAME GRAPH *************************/
-
       {
-        data: padValues(data[secondChartMoods[1]], 0.2),
-        //data: data[secondChartMoods[0]],
+        data: padValues(data[moods[4]], 0),
         yAxisID: 'likert',
-        label: secondChartMoodLabels[0],
-        backgroundColor: 'rgba(0,0,0,0)', //'rgba(255, 99, 132, 0.2)',
+        label: moodLabels[4],
+        backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(73,212,200,' + opacity + ')',
         borderWidth: lineWidth
       },
 
       {
-        data: padValues(data[secondChartMoods[1]], 0.25),
-        //data: data[moods[1]],
+        data: padValues(data[moods[5]], -0.05),
         yAxisID: 'likert',
-        label: secondChartMoodLabels[1],
+        label: moodLabels[5],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(66,157,255,' + opacity + ')',
         borderWidth: lineWidth
       },
 
       {
-        data: padValues(data[secondChartMoods[2]], 0.3),
-        //data: data[moods[2]],
+        data: padValues(data[moods[6]], -0.1),
         yAxisID: 'likert',
-        label: secondChartMoodLabels[2],
+        label: moodLabels[6],
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(100,61,28,' + opacity + ')',
         borderWidth: lineWidth
       },
 
       {
-        data: padValues(data[secondChartMoods[3]], .35),
-        //data: data[moods[3]],
-        label: secondChartMoodLabels[3],
+        data: padValues(data[moods[7]], -0.15),
+        label: moodLabels[7],
         yAxisID: 'likert',
         backgroundColor: 'rgba(0,0,0,0)',
         borderColor: 'rgba(100,100,100,' + opacity + ')',
@@ -321,6 +327,7 @@ function createConfoundChart(chartData) {
       legend: {
         position: 'right'
       },
+      spanGaps: false,
       scales: {
         yAxes: [
           {
@@ -355,7 +362,8 @@ function createConfoundChart(chartData) {
 
 
 function padValues(data, padding) {
-  return data.map((value) => Math.min(4, value + padding))
+  let lowerBounds = data.map((value) => Math.max(0, value + padding))
+  return lowerBounds.map((value) => Math.min(4, value + padding))
 }
 
 function createConfoundChartData(data, startDateIndex) {
