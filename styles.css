@@ -111,6 +111,7 @@ li:before {
   position: relative;
   box-sizing: border-box;
   margin-bottom: 24px;
+  text-align: center;
 }
 
 .content:before {
